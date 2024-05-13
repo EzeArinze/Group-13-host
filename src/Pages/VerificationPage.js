@@ -64,7 +64,7 @@ function VerificationCodeInput({ digit, setCode }) {
       maxLength="1"
       className="verification-code-input"
       value={digit}
-      onChange={(e) => setCode(e.target.value)}
+      onChange={(e) => setCode(Number(e.target.value))}
     />
   );
 }
