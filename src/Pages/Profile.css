@@ -41,6 +41,13 @@
   border: 3px solid #fff;
   border-radius: 50%;
 }
+.profile-name {
+  font-size: 2rem;
+}
+
+.profile-email {
+  font-size: 1.2rem;
+}
 
 .syncm {
   width: 100%;
@@ -78,11 +85,12 @@
 }
 
 .sync-lay button {
-  font-weight: 5s00;
+  font-weight: 700;
   border-radius: 12px;
   padding: 6px 16px;
   background-color: #881186;
   color: #fff;
+  border: none;
 }
 
 .sync {
@@ -108,9 +116,11 @@
   border: 1px solid #211f68;
   border-radius: 20px;
   overflow: hidden;
+  background-color: #bbbb;
 }
 
 .form-lay input {
+  width: 100%;
   font-size: 20px;
   padding: 20px;
   background-color: #211f68;
