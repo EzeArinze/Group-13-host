@@ -89,7 +89,7 @@ function NavBar() {
           <h3>Help</h3>
           <ul className="nav-ul">
             {help.map((help) => (
-              <li className="nav-li">
+              <li className="nav-li" key={help.title}>
                 <div className="icon-div">
                   {help.logo}
                   {help.title}

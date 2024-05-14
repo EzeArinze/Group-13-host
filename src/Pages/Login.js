@@ -58,7 +58,7 @@ function LoginForm() {
         // You can handle the successful login here, e.g., redirect the user to a dashboard
         console.log("Login successful:", data);
         // Redirect to profile page after successful login
-        history.push("/profile");
+        history("/profile");
       } else {
         // Login failed
         const errorData = await response.json();
