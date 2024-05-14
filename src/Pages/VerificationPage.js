@@ -245,14 +245,16 @@ export default function VerificationPage() {
               />
             ))}
           </div>
-          <p className="timer">00:30</p>
-          <div className="resend-code">
-            <span className="resend-code-text">Did not get Code?</span>
-            <button type="button" className="resend-code-button">
-              Resend Code
-            </button>
+          <div className="form-footer">
+            <p className="timer">00:30</p>
+            <div className="resend-code">
+              <span className="resend-code-text">Did not get Code?</span>
+              <button type="button" className="resend-code-button">
+                Resend Code
+              </button>
+            </div>
+            <CTAButton text="Submit" />
           </div>
-          <CTAButton text="Submit" />
         </form>
         {verificationStatus && <p className="error">{verificationStatus}</p>}
       </main>

@@ -16,7 +16,18 @@ function Logo() {
 }
 
 function SignUpButton() {
-  return <div className="sign-up-button">Sign up</div>;
+  const history = useNavigate();
+
+  const handleSignUpClick = () => {
+    // Navigate to the signup page
+    history("/");
+  };
+
+  return (
+    <div className="sign-up-button" onClick={handleSignUpClick}>
+      Sign up
+    </div>
+  );
 }
 
 function Header() {

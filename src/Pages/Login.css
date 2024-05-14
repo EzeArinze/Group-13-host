@@ -63,6 +63,7 @@
   letter-spacing: -0.2px;
   padding: 8px 18px;
   font: 16px Montserrat, sans-serif;
+  cursor: pointer;
 }
 
 @media (max-width: 991px) {

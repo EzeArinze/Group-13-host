@@ -290,7 +290,7 @@ const Signup = () => {
           <img className="mediaPic" src={mediaPic} alt="Media name" />
         </div>
         <button className="login" onClick={() => navigate("/login")}>
-          LOGIN
+          Login
         </button>
       </div>
       <div className="container">
