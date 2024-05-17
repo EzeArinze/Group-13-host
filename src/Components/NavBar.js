@@ -128,17 +128,17 @@ const navBarData = [
   },
   {
     title: "Playlist",
-    path: "/",
+    path: "/Playlist",
     logo: <MdOutlineQueueMusic className="nav-icon" />,
   },
   {
     title: "Media Tracking",
-    path: "/",
+    path: "/MediaTracking",
     logo: <PiMusicNotesPlusFill className="nav-icon" />,
   },
   {
     title: "Favorite",
-    path: "/",
+    path: "/Favorite",
     logo: <MdOutlineFavoriteBorder className="nav-icon" />,
   },
 ];
