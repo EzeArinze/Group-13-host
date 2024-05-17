@@ -7,6 +7,8 @@ import Favorite from "./Pages/Favorite";
 import MediaTracking from "./Pages/MediaTracking";
 import VerificationPage from "./Pages/VerificationPage";
 import Dashboard from "./Pages/Dashboard";
+import FAQ from "./Pages/FAQ";
+import Settings from "./Pages/Settings";
 import "./App.css";
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
           <Route path="Playlist" element={<Playlist />} />
           <Route path="Favorite" element={<Favorite />} />
           <Route path="MediaTracking" element={<MediaTracking />} />
+          <Route path="FAQ" element={<FAQ />} />
+          <Route path="Settings" element={<Settings />} />
         </Routes>
       </BrowserRouter>
     </div>

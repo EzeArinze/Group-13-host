@@ -145,19 +145,22 @@ const navBarData = [
 
 const help = [
   {
+    id: 1,
     title: "Settings",
-    path: "/",
+    path: "/Settings",
     logo: <FaCog className="nav-icon" />,
   },
   {
+    id: 2,
     title: "FAQ",
-    path: "/",
+    path: "/FAQ",
     logo: <FaRegCircleQuestion className="nav-icon" />,
   },
 ];
 
 function NavBar() {
   const [activeItem, setActiveItem] = useState(null);
+  const [activeId, setActiveId] = useState(null);
   const navigate = useNavigate();
 
   const handleItemClick = (index, path) => {
@@ -168,6 +171,11 @@ function NavBar() {
       setActiveItem(index);
       navigate(path);
     }
+  };
+
+  const handleClick = (id, path) => {
+    setActiveId(id);
+    navigate(path);
   };
 
   return (
@@ -203,11 +211,15 @@ function NavBar() {
         <div className="nav">
           <h3>Help</h3>
           <ul className="nav-ul">
-            {help.map((help) => (
-              <li className="nav-li" onClick={() => navigate(help.path)}>
+            {help.map((item) => (
+              <li
+                key={item.id}
+                className={`nav-li ${item.id === activeId ? "active" : ""}`}
+                onClick={() => handleClick(item.id, item.path)}
+              >
                 <div className="icon-div">
-                  {help.logo}
-                  {help.title}
+                  {item.logo}
+                  {item.title}
                 </div>
               </li>
             ))}

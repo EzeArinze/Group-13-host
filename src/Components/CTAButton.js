@@ -1,13 +1,27 @@
+// import "../Components/CTAButton.css";
+
+// function Button({ text, onClick }) {
+//   return (
+//     <>
+//       <button className="submit-button" onClick={onClick}>
+//         {text}
+//       </button>
+//     </>
+//   );
+// }
+
+// export default Button;
+
+// CTAButton.js
+import React from "react";
 import "../Components/CTAButton.css";
 
-function Button({ text, onClick }) {
+function CTAButton({ text, onClick, children, disabled }) {
   return (
-    <>
-      <button className="submit-button" onClick={onClick}>
-        {text}
-      </button>
-    </>
+    <button className="submit-button" onClick={onClick} disabled={disabled}>
+      {children || text}
+    </button>
   );
 }
 
-export default Button;
+export default CTAButton;

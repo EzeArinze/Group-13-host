@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import CTAButton from "../Components/CTAButton";
+import { ThreeDots } from "react-loader-spinner";
 
 function Logo() {
   return (
@@ -46,10 +47,12 @@ function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
   const history = useNavigate(); // Initialize useHistory hook
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
 
     try {
       const response = await fetch(
@@ -78,6 +81,8 @@ function LoginForm() {
     } catch (error) {
       console.error("Error during login:", error);
       setError("An error occurred during login");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -107,7 +112,11 @@ function LoginForm() {
         {" "}
         Forgot Password? <span className="click-here">Click Here</span>
       </div>
-      <CTAButton text={"Login"} type="submit" />
+      <CTAButton text="Login" type="submit" disabled={isLoading}>
+        {isLoading && (
+          <ThreeDots height="10" width="80" color="#fff" ariaLabel="loading" />
+        )}
+      </CTAButton>
     </form>
   );
 }

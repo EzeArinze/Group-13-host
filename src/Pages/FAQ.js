@@ -1,6 +1,6 @@
 import NavBar from "../Components/NavBar";
 
-function Playlist() {
+function FAQ() {
   return (
     <div>
       <NavBar />
@@ -8,4 +8,4 @@ function Playlist() {
   );
 }
 
-export default Playlist;
+export default FAQ;

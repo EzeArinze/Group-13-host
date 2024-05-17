@@ -1,7 +1,8 @@
+import NavBar from "../Components/NavBar";
 function MediaTracking() {
   return (
     <div>
-      <h1>Media Tracking</h1>
+      <NavBar />
     </div>
   );
 }
