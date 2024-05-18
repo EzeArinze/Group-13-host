@@ -4,6 +4,7 @@ import "../Pages/Dashboard.css";
 import Card from "../Components/Card";
 import Modal from "../Components/Modal";
 import { useState } from "react";
+import { useNavigate } from "react-router";
 
 function Dashboard() {
   return (
@@ -52,12 +53,13 @@ function Description() {
 
 function Recommended() {
   const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
 
   function handleAddMusic() {
     alert("card clicked");
   }
   function handleAddMovie() {
-    alert("card clicked");
+    navigate("/FetchMovies");
   }
   function handleIntegrate() {
     setShowModal(true);

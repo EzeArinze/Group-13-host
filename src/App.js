@@ -9,6 +9,7 @@ import VerificationPage from "./Pages/VerificationPage";
 import Dashboard from "./Pages/Dashboard";
 import FAQ from "./Pages/FAQ";
 import Settings from "./Pages/Settings";
+import FetchMovies from "./Pages/FetchMovies";
 import "./App.css";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="MediaTracking" element={<MediaTracking />} />
           <Route path="FAQ" element={<FAQ />} />
           <Route path="Settings" element={<Settings />} />
+          <Route path="/FetchMovies" element={<FetchMovies />} />
         </Routes>
       </BrowserRouter>
     </div>
