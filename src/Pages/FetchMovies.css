@@ -59,6 +59,7 @@
   border-radius: 80px;
   background-color: var(--Grey-disabled-02, #f8f7f7);
   display: flex;
+  align-items: center;
   gap: 8px;
   font-size: 20px;
   color: var(--text-helper-white-theme-03, #666);
