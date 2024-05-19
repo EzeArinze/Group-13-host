@@ -56,7 +56,7 @@ function Recommended() {
   const navigate = useNavigate();
 
   function handleAddMusic() {
-    alert("card clicked");
+    alert("Coming Soon");
   }
   function handleAddMovie() {
     navigate("/FetchMovies");
@@ -78,7 +78,7 @@ function Recommended() {
           <span onClick={handleAddMovie}>&#43;</span>
         </Card>
         <Card backgroundImage="../Frame143.png">
-          <h3>Integrate with a platform</h3>
+          <h3>Link with platform</h3>
           <span onClick={handleIntegrate}>&#43;</span>
         </Card>
       </div>
