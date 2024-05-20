@@ -66,9 +66,9 @@ function Watchlist({ watchlist, setWatchlist }) {
           {watchlist.length === 0 ? (
             <p className="msg">No movies currently in your watchlist</p>
           ) : (
-            <ul className="list">
+            <ul className="w-list">
               {watchlist.map((movie) => (
-                <li className="listed" key={movie.imdbID}>
+                <li className="w-listed" key={movie.imdbID}>
                   <img src={movie.Poster} alt={`${movie.Title} poster`} />
                   <h3>{movie.Title}</h3>
                   <p>{movie.Year}</p>
