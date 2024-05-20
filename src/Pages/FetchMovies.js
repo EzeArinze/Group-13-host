@@ -122,10 +122,17 @@ function SearchMovies({ watchlist, setWatchlist }) {
     }
 
     const fetchMovies = async () => {
+      // try {
+      //   const response = await fetch(
+      //     `http://www.omdbapi.com/?apikey=4617dbc&s=${search}`
+      //   );
       try {
         const response = await fetch(
-          `http://www.omdbapi.com/?apikey=4617dbc&s=${search}`
+          `https://www.omdbapi.com/?apikey=4617dbc&s=${search}`
         );
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const data = await response.json();
         if (data.Response === "True") {
           setMovies(data.Search);
@@ -144,7 +151,7 @@ function SearchMovies({ watchlist, setWatchlist }) {
   const handleMovieClick = async (movieId) => {
     try {
       const response = await fetch(
-        `http://www.omdbapi.com/?apikey=4617dbc&i=${movieId}`
+        `https://www.omdbapi.com/?apikey=4617dbc&i=${movieId}`
       );
       const data = await response.json();
       setSelectedMovie(data);
