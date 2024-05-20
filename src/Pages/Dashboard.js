@@ -25,12 +25,14 @@ function Menu() {
 }
 
 function Description() {
+  const navigate = useNavigate();
+
   function handlePlaylist() {
     alert("will take you to playlist");
   }
 
   function handleWatchlist() {
-    alert("will take you to Watchlist");
+    navigate("/watchlist");
   }
 
   return (

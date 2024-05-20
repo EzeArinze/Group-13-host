@@ -10,9 +10,13 @@ import Dashboard from "./Pages/Dashboard";
 import FAQ from "./Pages/FAQ";
 import Settings from "./Pages/Settings";
 import FetchMovies from "./Pages/FetchMovies";
+import Watchlist from "./Pages/Watchlist";
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [watchlist, setWatchlist] = useState([]);
+
   return (
     <div>
       <BrowserRouter>
@@ -27,7 +31,18 @@ function App() {
           <Route path="MediaTracking" element={<MediaTracking />} />
           <Route path="FAQ" element={<FAQ />} />
           <Route path="Settings" element={<Settings />} />
-          <Route path="/FetchMovies" element={<FetchMovies />} />
+          <Route
+            path="/FetchMovies"
+            element={
+              <FetchMovies watchlist={watchlist} setWatchlist={setWatchlist} />
+            }
+          />
+          <Route
+            path="/watchlist"
+            element={
+              <Watchlist watchlist={watchlist} setWatchlist={setWatchlist} />
+            }
+          />
         </Routes>
       </BrowserRouter>
     </div>

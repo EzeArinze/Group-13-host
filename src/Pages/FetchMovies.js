@@ -104,14 +104,16 @@ import { FaSearch } from "react-icons/fa";
 import MovieModal from "../Components/MovieModal";
 import NavBar from "../Components/NavBar";
 import "./FetchMovies.css";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function SearchMovies({ watchlist, setWatchlist }) {
   const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState("");
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // const navigate = useNavigate();
+  const [notification, setNotification] = useState("");
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (search.trim() === "") {
@@ -152,13 +154,27 @@ function SearchMovies({ watchlist, setWatchlist }) {
     }
   };
 
+  const handleAddToWatchlist = (movie) => {
+    setWatchlist((prevWatchlist) => [...prevWatchlist, movie]);
+    setNotification(`${movie.Title} has been added to your watchlist.`);
+    setTimeout(() => setNotification(""), 3000); // Clear notification after 3 seconds
+    setIsModalOpen(false);
+  };
+
+  const handleRemoveFromWatchlist = (movieId) => {
+    setWatchlist((prevWatchlist) =>
+      prevWatchlist.filter((movie) => movie.imdbID !== movieId)
+    );
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="fetchmovies">
       <NavBar />
       <div className="smovie">
         <div className="movie-section">
           <section className="content-wrapper">
-            <div className="content-container">
+            {/* <div className="content-container">
               <h1 className="section-title">Search for Movies</h1>
               <Search search={search} setSearch={setSearch} />
               <div className="category-container">
@@ -170,6 +186,22 @@ function SearchMovies({ watchlist, setWatchlist }) {
                   Watchlist
                 </button>
               </div>
+            </div> */}
+            <div className="content-container">
+              <h1 className="section-title">Search for Movies</h1>
+              <Search search={search} setSearch={setSearch} />
+              <div className="category-container">
+                <button className="category-button">Movies</button>
+                <button
+                  className="category-button"
+                  onClick={() => navigate("/watchlist")}
+                >
+                  Watchlist
+                </button>
+              </div>
+              {notification && (
+                <div className="notification">{notification}</div>
+              )}
             </div>
           </section>
         </div>
@@ -177,12 +209,24 @@ function SearchMovies({ watchlist, setWatchlist }) {
         <section>
           <MovieList movies={movies} onMovieClick={handleMovieClick} />
         </section>
-
+        {/* 
         <MovieModal
           isOpen={isModalOpen}
           onRequestClose={() => setIsModalOpen(false)}
           movie={selectedMovie}
-        />
+        /> */}
+        {selectedMovie && (
+          <MovieModal
+            isOpen={isModalOpen}
+            onRequestClose={() => setIsModalOpen(false)}
+            movie={selectedMovie}
+            onAddToWatchlist={handleAddToWatchlist}
+            onRemoveFromWatchlist={handleRemoveFromWatchlist}
+            isInWatchlist={watchlist.some(
+              (movie) => movie.imdbID === selectedMovie.imdbID
+            )}
+          />
+        )}
       </div>
     </div>
   );
