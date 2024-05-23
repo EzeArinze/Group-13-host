@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Profile from "./Pages/Profile";
 import Signup from "./Pages/Signup";
 import Login from "./Pages/Login";
-import Playlist from "./Pages/Playlist";
 import Favorite from "./Pages/Favorite";
 import MediaTracking from "./Pages/MediaTracking";
 import VerificationPage from "./Pages/VerificationPage";
@@ -11,11 +10,14 @@ import FAQ from "./Pages/FAQ";
 import Settings from "./Pages/Settings";
 import FetchMovies from "./Pages/FetchMovies";
 import Watchlist from "./Pages/Watchlist";
+import MusicPage from "./Pages/MusicPage";
+import Playlist from "./Pages/Playlist";
 import { useState } from "react";
 import "./App.css";
 
 function App() {
   const [watchlist, setWatchlist] = useState([]);
+  const [playlist, setPlaylist] = useState([]);
 
   return (
     <div>
@@ -26,7 +28,16 @@ function App() {
           <Route path="Login" element={<Login />} />
           <Route path="/Dashboard" element={<Dashboard />} />
           <Route path="Profile" element={<Profile />} />
-          <Route path="Playlist" element={<Playlist />} />
+          <Route
+            path="/MusicPage"
+            element={
+              <MusicPage playlist={playlist} setPlaylist={setPlaylist} />
+            }
+          />
+          <Route
+            path="/Playlist"
+            element={<Playlist playlist={playlist} setPlaylist={setPlaylist} />}
+          />
           <Route path="Favorite" element={<Favorite />} />
           <Route path="MediaTracking" element={<MediaTracking />} />
           <Route path="FAQ" element={<FAQ />} />
@@ -38,7 +49,7 @@ function App() {
             }
           />
           <Route
-            path="/watchlist"
+            path="/Watchlist"
             element={
               <Watchlist watchlist={watchlist} setWatchlist={setWatchlist} />
             }

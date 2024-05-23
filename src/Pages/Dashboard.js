@@ -28,11 +28,11 @@ function Description() {
   const navigate = useNavigate();
 
   function handlePlaylist() {
-    alert("will take you to playlist");
+    navigate("/Playlist");
   }
 
   function handleWatchlist() {
-    navigate("/watchlist");
+    navigate("/Watchlist");
   }
 
   return (
@@ -58,7 +58,7 @@ function Recommended() {
   const navigate = useNavigate();
 
   function handleAddMusic() {
-    alert("Coming Soon");
+    navigate("/MusicPage");
   }
   function handleAddMovie() {
     navigate("/FetchMovies");
