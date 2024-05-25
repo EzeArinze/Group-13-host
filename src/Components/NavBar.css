@@ -50,6 +50,7 @@
 .nav-header {
   align-self: start;
   display: flex;
+  align-items: center;
   gap: 8px;
   color: var(--text-Primary-text-02, #fefefe);
   font-weight: 600;
