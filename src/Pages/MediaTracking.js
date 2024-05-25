@@ -3,6 +3,7 @@ function MediaTracking() {
   return (
     <div>
       <NavBar />
+      <h1>Coming Soon...</h1>
     </div>
   );
 }

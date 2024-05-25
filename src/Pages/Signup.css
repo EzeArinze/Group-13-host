@@ -1,23 +1,10 @@
-.container {
+.signup-container {
   width: 100vw;
   max-width: 120rem;
   min-width: 32rem;
   height: 100vh;
   margin: 0 auto;
   padding: 4rem 0rem;
-}
-
-.navigation {
-  padding: 2rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navLogo {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
 }
 
 .login {
@@ -44,15 +31,12 @@
 } */
 
 .content {
-  width: 85%;
-  /* max-height: auto; */
   min-width: 16rem;
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
   gap: 1.4rem;
-  /* margin-top: 1rem; */
-  /* background-color: #fff; */
 }
 
 .h1 {
@@ -64,28 +48,19 @@
   margin-bottom: 1rem;
 }
 
-/* .passwordInput,
-.emailInput {
-  width: 100%;
-  height: auto;
-  background-color: #fff;
-  border-radius: 1rem;
-  padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-} */
 .passwordInput,
 .emailInput {
   border-radius: 64px;
   border: 1px solid rgba(254, 254, 254, 1);
   background-color: var(--Grey-disabled-02, #f8f7f7);
-  width: 700px;
+  width: 600px;
   max-width: 100%;
   color: var(--text-helper-white-theme-03, #666);
   letter-spacing: -0.2px;
   outline: none;
   padding: 15px 30px;
   font: 600 16px/150% Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
-  margin-bottom: 10px; /* Add some space between inputs */
+  margin-bottom: 10px;
 }
 
 .passwordInput {
@@ -185,14 +160,14 @@ input {
   cursor: pointer;
   appearance: none;
   background-color: white;
-  border: 2px solid #7209b7; /* Border color */
+  border: 2px solid #7209b7;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #checkbox:checked {
-  background-color: #7209b7; /* Background color when checked */
+  background-color: #7209b7;
 }
 
 /* Add a checkmark when checked */
@@ -204,7 +179,6 @@ input {
 
 /* Style the container */
 .checkbox-container {
-  /* background-color: aqua; */
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -217,4 +191,163 @@ input {
   cursor: pointer;
   font-size: 1.6rem;
   color: #999; /* Text color */
+}
+
+@media (max-width: 360px) {
+  .signup-container {
+    padding: 2rem 1rem;
+  }
+  .h1 {
+    font-size: 2.5rem;
+  }
+  .passwordInput,
+  .emailInput {
+    width: 70%;
+    padding: 0.8rem 2rem;
+  }
+  .signupBtn {
+    width: 90%;
+    padding: 1rem 2rem;
+  }
+
+  .footerLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .footerIcon {
+    width: 2.6rem;
+    height: auto;
+    cursor: pointer;
+  }
+  .line {
+    width: 8rem;
+    height: 0.2rem;
+  }
+  #checkbox {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .signup-container {
+    margin-top: 4rem;
+    padding: 2rem 1rem;
+  }
+  .h1 {
+    font-size: 2.5rem;
+  }
+  .passwordInput,
+  .emailInput {
+    width: 60%;
+    padding: 0.4rem 1.5rem;
+  }
+
+  .inputCode,
+  .inputEmail,
+  input {
+    font-size: 12px;
+  }
+  .signupBtn {
+    width: 90%;
+    padding: 1rem 1.5rem;
+  }
+
+  .footerLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .footerIcon {
+    width: 2.6rem;
+    height: auto;
+    cursor: pointer;
+  }
+  .line {
+    width: 6rem;
+    height: 0.2rem;
+  }
+  #checkbox {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@media (min-width: 366px) and (max-width: 767px) {
+  .signup-container {
+    padding: 3rem 2rem;
+  }
+  .h1 {
+    font-size: 2.2rem;
+  }
+  .passwordInput,
+  .emailInput {
+    width: 60%;
+    padding: 1rem 2rem;
+  }
+  /* .signupBtn {
+    width: 80%;
+    padding: 1rem 2rem;
+  } */
+  .footerLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+  }
+
+  .footerIcon {
+    width: 3rem;
+    height: auto;
+    cursor: pointer;
+  }
+  .line {
+    width: 8rem;
+    height: 0.2rem;
+  }
+  #checkbox {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .signup-container {
+    padding: 4rem 3rem;
+  }
+  .h1 {
+    font-size: 2.8rem;
+  }
+  .passwordInput,
+  .emailInput {
+    width: 60%;
+    padding: 1rem 2rem;
+  }
+  .signupBtn {
+    width: 70%;
+    padding: 1.2rem 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .signup-container {
+    padding: 4rem 4rem;
+  }
+  .h1 {
+    font-size: 3rem;
+  }
+  .passwordInput,
+  .emailInput {
+    width: 60%;
+    padding: 1.5rem 3rem;
+  }
+  .signupBtn {
+    width: 60%;
+    padding: 1.5rem 3rem;
+  }
 }

@@ -328,7 +328,7 @@ function Search({ search, setSearch, setGenre }) {
 
   return (
     <div className="search-section">
-      <div className="search-input">
+      <div className="m-search-input">
         <FaSearch className="search-icon" />
         <input
           type="text"
@@ -463,8 +463,10 @@ function Track({ item, addToPlaylist, playlist }) {
           height="64"
         />
         <div className="track-details">
-          <strong>{trackName || "Unknown Track"}</strong> by{" "}
-          {artistNames || "Unknown Artist"}
+          <strong className="tr-name">{trackName || "Unknown Track"}</strong>
+          <span className="by-artist">
+            by {artistNames || "Unknown Artist"}
+          </span>
           <p className="album">Album: {albumName || "Unknown Album"}</p>
         </div>
         {isInPlaylist ? (

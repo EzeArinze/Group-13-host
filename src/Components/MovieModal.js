@@ -81,12 +81,11 @@ function MovieModal({
       overlayClassName="modal-overlay"
       contentLabel="Movie Details"
     >
-      <div className="modal-header">
+      <div className="modal-header"></div>
+      <div className="modal-body">
         <button className="close-button" onClick={onRequestClose}>
           &times;
         </button>
-      </div>
-      <div className="modal-body">
         <img src={movie.Poster} alt={`${movie.Title} poster`} />
         <h2 className="modal-title">{movie.Title}</h2>
         <p>{movie.Plot}</p>

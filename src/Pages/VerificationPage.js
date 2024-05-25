@@ -165,15 +165,14 @@ export default function VerificationPage() {
         <img
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/f0a312d70048a81c3e0b97420bdbb31a4d89d2fb5982aec87ed80114733eedd2?apiKey=66cde03c14284deb81366fe06ee3971c&"
           alt="Media Hub Logo"
-          className="logo"
+          className="ver-logo"
         />
-        <h1 className="title">Media Hub</h1>
+        <h1 className="ver-title">Media Hub</h1>
       </header>
-      <main className="container">
-        <h2 className="subtitle">Enter Verification Code</h2>
+      <main className="ver-container">
+        <h2 className="ver-subtitle">Enter Verification Code</h2>
         <p className="description">
-          Check your email for the verification code, we sent you a 4-digit code
-          to your email.
+          Verification code of 4-digit has been sent you to your email.
         </p>
         <form onSubmit={handleVerify}>
           <div className="verification-code-inputs">

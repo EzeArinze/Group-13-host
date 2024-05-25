@@ -37,7 +37,7 @@ function Description() {
 
   return (
     <div>
-      <h1>Good Morning Fechi</h1>
+      <h1>Good Morning</h1>
       <div className="des-container">
         <div className="des-con-items">
           <h3>Your Personal Entertainment Hub</h3>
@@ -47,7 +47,7 @@ function Description() {
             <button onClick={handleWatchlist}>Watchlist</button>
           </div>
         </div>
-        <img src="Group-16.png" alt="movie" />
+        <img src="Group-16.png" alt="movie" className="des-img" />
       </div>
     </div>
   );
@@ -69,7 +69,7 @@ function Recommended() {
 
   return (
     <div className="h-card">
-      <h2>Recommended To Do</h2>
+      <h2 id="h-card-h2">Recommended To Do</h2>
       <div className="recomend">
         <Card backgroundImage="../Frame1438.png">
           <h3>Add music manually</h3>
