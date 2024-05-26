@@ -56,7 +56,7 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  width: 100%;
+  width: 80%;
 }
 
 .login-title {
@@ -213,8 +213,9 @@
   }
   .email-input,
   .password-input {
-    width: 60%;
-    padding: 10px 22px;
+    width: 65%;
+    padding: 8px 22px;
+    font-size: 1.4rem;
   }
   .login-title {
     font-size: 28px;
@@ -272,7 +273,7 @@
   }
   .email-input,
   .password-input {
-    width: 50%;
+    width: 60%;
     padding: 12px 25px;
     font-size: 1.5rem;
   }
