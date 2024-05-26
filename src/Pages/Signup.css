@@ -159,7 +159,7 @@ input {
   margin-right: 0.5rem;
   cursor: pointer;
   appearance: none;
-  background-color: white;
+  background-color: transparent;
   border: 2px solid #7209b7;
   display: flex;
   justify-content: center;
@@ -202,9 +202,16 @@ input {
   }
   .passwordInput,
   .emailInput {
-    width: 70%;
-    padding: 0.8rem 2rem;
+    width: 60%;
+    padding: 0.3rem 2rem;
   }
+
+  .inputEmail,
+  .inputName,
+  .inputCode {
+    font-size: 1rem;
+  }
+
   .signupBtn {
     width: 90%;
     padding: 1rem 2rem;
@@ -229,6 +236,9 @@ input {
   #checkbox {
     width: 2rem;
     height: 2rem;
+  }
+  .checkbox-container label {
+    font-size: 1.2rem;
   }
 }
 
@@ -287,8 +297,8 @@ input {
   }
   .passwordInput,
   .emailInput {
-    width: 60%;
-    padding: 1rem 2rem;
+    width: 40%;
+    padding: 0.8rem 2rem;
   }
   /* .signupBtn {
     width: 80%;
@@ -325,7 +335,7 @@ input {
   }
   .passwordInput,
   .emailInput {
-    width: 60%;
+    width: 40%;
     padding: 1rem 2rem;
   }
   .signupBtn {
@@ -343,7 +353,7 @@ input {
   }
   .passwordInput,
   .emailInput {
-    width: 60%;
+    width: 45%;
     padding: 1.5rem 3rem;
   }
   .signupBtn {

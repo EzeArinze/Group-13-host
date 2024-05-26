@@ -149,6 +149,7 @@
   .sign-up-button {
     padding: 6px 12px;
     font-size: 14px;
+    margin-top: 0;
   }
   .email-input,
   .password-input {
@@ -171,8 +172,12 @@
     justify-content: center;
     width: 60%;
     max-width: 60%;
-    gap: 8rem;
+    gap: 6rem;
     margin-top: 0.6rem;
+  }
+  .social-icon {
+    width: 2.8rem;
+    height: 2.8rem;
   }
 }
 
@@ -191,23 +196,28 @@
   }
   .logo-container {
     font-size: 26px;
-    gap: 9px;
+    gap: 5px;
   }
   .logo {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .logo-text {
+    font-size: 2rem;
   }
   .sign-up-button {
-    padding: 7px 13px;
-    font-size: 14px;
+    margin-top: 0;
+    padding: 2px 4px;
+    font-size: 10px;
   }
   .email-input,
   .password-input {
     width: 60%;
-    padding: 12px 22px;
+    padding: 10px 22px;
   }
   .login-title {
-    font-size: 34px;
+    font-size: 28px;
   }
 
   .divider-line {
@@ -223,8 +233,12 @@
     justify-content: center;
     width: 60%;
     max-width: 60%;
-    gap: 8rem;
+    gap: 6rem;
     margin-top: 0.6rem;
+  }
+  .social-icon {
+    width: 2.8rem;
+    height: 2.8rem;
   }
 }
 
@@ -245,20 +259,22 @@
     gap: 10px;
   }
   .logo {
-    width: 45px;
+    width: 38px;
   }
   .login-form {
     margin-top: 40px;
   }
 
   .sign-up-button {
-    padding: 8px 14px;
+    padding: 6px 14px;
     font-size: 15px;
+    margin-top: 0;
   }
   .email-input,
   .password-input {
-    width: 70%;
-    padding: 18px 25px;
+    width: 50%;
+    padding: 12px 25px;
+    font-size: 1.5rem;
   }
   .login-title {
     font-size: 36px;
@@ -269,11 +285,16 @@
     max-width: 100%;
     gap: 9rem;
   }
+
+  .social-icon {
+    width: 3rem;
+    height: 3rem;
+  }
   .divider-line {
     width: 10%;
     border: 1px solid #fff;
     align-self: stretch;
-    flex: 1;
+    /* flex: 1; */
     margin: auto 0;
   }
 }
@@ -296,11 +317,13 @@
   .sign-up-button {
     padding: 8px 16px;
     font-size: 16px;
+    margin-top: 0;
   }
   .email-input,
   .password-input {
-    width: 80%;
-    padding: 20px 30px;
+    width: 50%;
+    padding: 14px 30px;
+    font-size: 1.5rem;
   }
   .login-title {
     font-size: 40px;
@@ -338,11 +361,12 @@
   .sign-up-button {
     padding: 8px 18px;
     font-size: 16px;
+    margin-top: 0;
   }
   .email-input,
   .password-input {
-    width: 608px;
-    padding: 20px 30px;
+    width: 50%;
+    padding: 15px 30px;
   }
   .login-title {
     font-size: 48px;
