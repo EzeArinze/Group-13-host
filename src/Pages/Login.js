@@ -48,7 +48,7 @@ function LoginForm() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const history = useNavigate(); // Initialize useHistory hook
+  const history = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -70,9 +70,12 @@ function LoginForm() {
         const data = await response.json();
         console.log("Login successful:", data);
 
+        // Save user data to local storage
+        localStorage.setItem("userName", data.name);
+        localStorage.setItem("userEmail", data.email);
+
         history("/Dashboard");
       } else {
-        // Login failed
         const errorData = await response.json();
         setError(errorData.message || "Login failed");
       }
