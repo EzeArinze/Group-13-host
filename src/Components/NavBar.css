@@ -124,8 +124,8 @@
 }
 
 .nav-li.active {
-  background-color: #881186;
-  border-radius: 14px;
+  background: linear-gradient(94deg, #b5179e -13.04%, #7209b7 124.22%);
+  border-radius: 1.8rem;
   color: #fff;
 }
 
