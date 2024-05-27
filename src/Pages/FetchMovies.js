@@ -198,7 +198,12 @@ function SearchMovies({ watchlist, setWatchlist }) {
               <h1 className="section-title">Search for Movies</h1>
               <Search search={search} setSearch={setSearch} />
               <div className="category-container">
-                <button className="category-button">Movies</button>
+                <button
+                  className="category-button"
+                  onClick={() => navigate("/MediaTracking")}
+                >
+                  Music
+                </button>
                 <button
                   className="category-button"
                   onClick={() => navigate("/watchlist")}

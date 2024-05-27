@@ -10,7 +10,6 @@ import FAQ from "./Pages/FAQ";
 import Settings from "./Pages/Settings";
 import FetchMovies from "./Pages/FetchMovies";
 import Watchlist from "./Pages/Watchlist";
-import MusicPage from "./Pages/MusicPage";
 import Playlist from "./Pages/Playlist";
 import { useState } from "react";
 import "./App.css";
@@ -29,9 +28,9 @@ function App() {
           <Route path="/Dashboard" element={<Dashboard />} />
           <Route path="Profile" element={<Profile />} />
           <Route
-            path="/MusicPage"
+            path="/MediaTracking"
             element={
-              <MusicPage playlist={playlist} setPlaylist={setPlaylist} />
+              <MediaTracking playlist={playlist} setPlaylist={setPlaylist} />
             }
           />
           <Route

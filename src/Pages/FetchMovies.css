@@ -114,6 +114,7 @@
     linear-gradient(94deg, #b5179e -13.04%, #7209b7 124.22%)
   );
   color: var(--background-light-theme-01, #fefefe);
+  cursor: pointer;
 }
 
 /* General styles for the list */

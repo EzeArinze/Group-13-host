@@ -58,7 +58,7 @@ function Recommended() {
   const navigate = useNavigate();
 
   function handleAddMusic() {
-    navigate("/MusicPage");
+    navigate("/MediaTracking");
   }
   function handleAddMovie() {
     navigate("/FetchMovies");
